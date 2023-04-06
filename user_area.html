@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+<body class="admin">
+<div id="wrapper">
+    <nav class="menu">
+        <button class="menu-switch" type="button"><i class="icon icon-menu">메뉴</i></button>
+        <ul class="menu-box">
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-home">메인</i>
+                    <span>메인</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./main_dashboard.html">대시보드</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list active">
+                <a>
+                    <i class="icon icon-people">사용자관리</i>
+                    <span>사용자관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./user_member.html">회원관리</a></li>
+                    <li><a href="./user_driver.html">승무사원관리</a></li>
+                    <li><a href="./user_area.html">지역관리</a></li>
+                    <li><a href="./user_payment.html">결제관리</a></li>
+                    <li><a href="./user_account.html">관리자계정관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-monitor">실시간모니터링</i>
+                    <span>실시간모니터링</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a target="_blank" href="./monitor_dashboard.html">관제</a></li>
+                    <li><a href="./monitor_ridehistory.html">배차요청이력</a></li>
+                    <li><a target="blank" href="./monitor_state.html">차량운행현황</a></li>
+                   <!-- <li><a href="#">노선운행현황</a></li>-->
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-station">정류장관리</i>
+                    <span>정류장관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="#">정류장관리</a></li>
+                    <li><a href="#">정류장보기</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-busSide">차량관리</i>
+                    <span>차량관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./car_list.html">차량관리</a></li>
+                    <li><a href="./car_terminal.html">단말기관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-setting">설정관리</i>
+                    <span>설정관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="#">앱 푸시/메시지 발송</a></li>
+                    <li><a href="./setting_massage.html">메시지 발송 이력</a></li>
+                    <li><a href="#">페널티관리</a></li>
+                    <li><a href="#">페널티 이력 조회</a></li>
+                    <li><a href="#">노선관리</a></li>
+                    <li><a href="#">노선차량관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-chart">통계</i>
+                    <span>통계</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./stats_passenger.html">탑승객 현황</a></li>
+                    <li><a href="./stats_drive.html">운행 현황</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-notice">게시판관리</i>
+                    <span>게시판관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./board_notice.html">공지사항</a></li>
+                    <li><a href="./board_qna.html">Q&A</a></li>
+                    <li><a href="./board_faq.html">자주묻는질문(FAQ)</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-devices">시스템관리</i>
+                    <span>시스템관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./system_history.html">장애이력관리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="logo-area">
+        <header class="user">
+            <ul class="user-list">
+                <li><img class="logo" src="resources/img/logo_type2_b.png" alt="mobble로고"></li>
+                <li class="user-list-box">
+                    <button class="name" type="button">김아무개</button>
+                    <span class="time">2022-11-25<span>09:33</span></span>
+                    <button class="btn btn-user" type="button">로그아웃</button>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="main">
+        <form>
+            <section class="header">
+                <header class="user">
+                    <div class="user-list">
+                        <ul class="user-map">
+                            <li>사용자관리</li>
+                            <li>지역관리</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <button class="btn btn-map" type="button"><i class="icon icon-reset">초기화</i>초기화</button>
+                            <button class="btn btn-map" type="button"><i class="icon icon-search">조회</i>조회</button>
+                        </div>
+                    </div>
+                </header>
+            </section>
+
+            <section class="content">
+                <!-- filter -->
+                <section class="content-header">
+                    <div class="table-header">
+                        <table>
+                            <caption>회원정보 필터 테이블</caption>
+                            <!--
+                                !주석!
+
+                                회원정보 필터는 2줄이 존재할 시
+                                자동으로 하단 "table-more" 버튼이 show/hide 됩니다
+                            -->
+                            <tbody>
+                                <tr>
+                                    <th>등록일</th>
+                                    <td class="table-wide">
+                                        <div class="datepicker-wrap">
+                                            <div class="datepicker-pair">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                            <div class="datepicker-pair">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                            <div class="chk-wrap chk-disabled">
+                                                <input type="checkbox" id="noDateChk">
+                                                <label for="noDateChk">조건 제외</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>검색어</th>
+                                    <td>
+                                        <div class="ip-wrap">
+                                            <input class="ip" type="text" id="seachWord" placeholder="검색어를 입력해주세요" >
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap table-more hide">
+                            <button class="btn btn-more" type="button"><i class="icon icon-more">펼쳐보기</i>펼쳐보기</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- data table -->
+                <section class="content-main">
+                    <div class="table-tit">
+                        <span>지역정보</span>
+                    </div>
+                    <div class="table table-fit">
+                        <table>
+                            <caption>지역정보 테이블</caption>
+                            <colgroup>
+                                <col style="width: 60px" />
+                                <col style="width: 70px"/>
+                                <col style="width: 40px"/>
+                                <col style="width: 40px"/>
+                                <col style="width: 40px"/>
+                                <col style="width: 40px"/>
+                                <col style="width: 70px"/>
+                                <col style="width: 40px"/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>지역이름</th>
+                                    <th>운영시간</th>
+                                    <th>사용여부</th>
+                                    <th>성인기본요금</th>
+                                    <th>청소년기본요금</th>
+                                    <th>어린이기본요금</th>
+                                    <th>운영시간</th>
+                                    <th>호출가능여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>대구</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>사용</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>호출가능</td>
+                                </tr>
+                                <tr>
+                                    <td>대구</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>사용</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>호출가능</td>
+                                </tr>
+                                <tr>
+                                    <td>대구</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>사용</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>호출가능</td>
+                                </tr>
+                                <tr>
+                                    <td>대구</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>사용</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>호출가능</td>
+                                </tr>
+                                <tr>
+                                    <td>대구</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>사용</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>호출가능</td>
+                                </tr>
+                                <tr>
+                                    <td>대구</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>사용</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>05:30 ~ 23:00</td>
+                                    <td>호출가능</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 데이터 없을 시-->
+                    <!--<div class="table">
+                        <span class="nodata">데이터가 없습니다.</span>
+                    </div>-->
+
+
+                    <div class="table-footer">
+                        <div class="data-count">
+                            <span>total: <b>7</b></span>
+                            <span>Result: <b>7</b></span>
+                            <!--
+                                !주석!
+
+                                데이터 개수가 카운트되어 <b></>b> 태그안에 표출됩니다.
+                            -->
+                        </div>
+                        <ul class="pagenation">
+                            <li><a href="#"><i class="icon icon-first">처음 페이지</i></a></li>
+                            <li><a href="#"><i class="icon icon-prev">이전 페이지</i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#"><i class="icon icon-next">다음 페이지</i></a></li>
+                            <li><a href="#"><i class="icon icon-last">마지막 페이지</i></a></li>
+                            <!--
+                                !주석!
+
+                                페이지 선택시 <li></li>에 class="active"가 추가되며,
+                                기존에 있던 active는 제거됩니다.
+
+                                단 아이콘이 있는 처음, 이전, 다음, 마지막 페이지는 class="active"가 추가되지 않습니다.
+                            -->
+                        </ul>
+                        <div class="select-wrap">
+                            <select name="listMax">
+                                <option value="10">10개씩 보기</option>
+                                <option value="20">20개씩 보기</option>
+                                <option value="30">30개씩 보기</option>
+                                <option value="50">50개씩 보기</option>
+                                <option value="100" selected>100개씩 보기</option>
+                                <option value="500">500개씩 보기</option>
+                                <option value="1000">1000개씩 보기</option>
+                                <!--
+                                    !주석!
+
+                                    데이터 리스트 기본옵션은 100개입니다
+                                -->
+                            </select>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </form>
+    </div>
+</div>
+
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+
+    !안내 팝업!
+    : id = "mw-ly-confirm"
+    확인안내 팝업
+-->
+
+<div id="mw-confirm" class="ly-pop ly-confirm ndim show">
+    <div class="wrap">
+        <div class="content-pop">
+            <button class="btn btn-close" type="button" onclick="popupClose('confirm','mw')"><i class="icon icon-close">닫기</i></button>
+            <section>
+                <div class="text-wrap">
+                    <h1>타이틀입니다</h1>
+                    <p>본문내용입니다</p>
+                </div>
+
+                <div class="btn-wrap row">
+                    <button class="btn btn-confirm" type="button" onclick="popupClose('confirm','mw')">확인</button>
+                    <button class="btn btn-confirm" type="button" onclick="popupClose('confirm','mw')">취소</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<script src="./resources/js/jquery-3.6.1.min.js"></script>
+<script src="./resources/js/jquery-ui.min.js"></script>
+<script src="./resources/js/UI.js"></script>
+<script>
+$(function () {
+});
+</script>
+
+</body>
+</html>

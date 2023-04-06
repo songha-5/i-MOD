@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+<body class="admin">
+<div id="wrapper">
+    <nav class="menu">
+        <button class="menu-switch" type="button"><i class="icon icon-menu">메뉴</i></button>
+        <ul class="menu-box">
+            <li class="menu-box-list active">
+                <a>
+                    <i class="icon icon-home">메인</i>
+                    <span>메인</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./main_dashboard.html">대시보드</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-people">사용자관리</i>
+                    <span>사용자관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./user_member.html">회원관리</a></li>
+                    <li><a href="./user_driver.html">승무사원관리</a></li>
+                    <li><a href="./user_area.html">지역관리</a></li>
+                    <li><a href="./user_payment.html">결제관리</a></li>
+                    <li><a href="./user_account.html">관리자계정관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-monitor">실시간모니터링</i>
+                    <span>실시간모니터링</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a target="blank" href="./monitor_dashboard.html">관제</a></li>
+                    <li><a href="./monitor_ridehistory.html">배차요청이력</a></li>
+                    <li><a target="blank" href="./monitor_state.html">차량운행현황</a></li>
+                   <!-- <li><a href="#">노선운행현황</a></li>-->
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-station">정류장관리</i>
+                    <span>정류장관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="#">정류장관리</a></li>
+                    <li><a href="#">정류장보기</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-busSide">차량관리</i>
+                    <span>차량관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./car_list.html">차량관리</a></li>
+                    <li><a href="./car_terminal.html">단말기관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-setting">설정관리</i>
+                    <span>설정관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <!--<li><a href="#">앱 푸시/메시지 발송</a></li>-->
+                    <li><a href="./setting_massage.html">메시지 발송 이력</a></li>
+                    <!--<li><a href="#">페널티관리</a></li>
+                    <li><a href="#">페널티 이력 조회</a></li>
+                    <li><a href="#">노선관리</a></li>
+                    <li><a href="#">노선차량관리</a></li>-->
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-chart">통계</i>
+                    <span>통계</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./stats_passenger.html">탑승객 현황</a></li>
+                    <li><a href="./stats_drive.html">운행 현황</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-notice">게시판관리</i>
+                    <span>게시판관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./board_notice.html">공지사항</a></li>
+                    <li><a href="./board_qna.html">Q&A</a></li>
+                    <li><a href="./board_faq.html">자주묻는질문(FAQ)</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-devices">시스템관리</i>
+                    <span>시스템관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./system_history.html">장애이력관리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="logo-area">
+        <header class="user">
+            <ul class="user-list">
+                <li><img class="logo" src="resources/img/logo_type2_b.png" alt="mobble로고"></li>
+                <li class="user-list-box">
+                    <button class="name" type="button">김아무개</button>
+                    <span class="time">2022-11-25<span>09:33</span></span>
+                    <button class="btn btn-user" type="button">로그아웃</button>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="main">
+        <form>
+            <section class="header">
+                <header class="user">
+                    <div class="user-list">
+                        <ul class="user-map">
+                            <li>메인</li>
+                            <li>대시보드</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <button class="btn btn-map" type="button"><i class="icon icon-reset">초기화</i>초기화</button>
+                            <button class="btn btn-map" type="button"><i class="icon icon-search">조회</i>조회</button>
+                        </div>
+                    </div>
+                </header>
+            </section>
+
+            <section class="content">
+                <!-- filter -->
+                <section class="content-header">
+                    <div class="table-header">
+                        <table>
+                            <caption>대시보드 필터 테이블</caption>
+                            <tbody>
+                            <tr>
+                                <th>기준일자</th>
+                                <td class="table-wide">
+                                    <div class="datepicker-wrap">
+                                        <div class="datepicker-pair">
+                                            <label>
+                                                <input type="text" class="datepicker">
+                                            </label>
+                                        </div>
+                                        <div class="datepicker-pair">
+                                            <label>
+                                                <input type="text" class="datepicker">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>지역</th>
+                                <td class="table-wide">
+                                    <div class="select-wrap">
+                                        <label>
+                                            <select name="memberType" required>
+                                                <option value="대구" selected>대구</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap table-more hide">
+                            <button class="btn btn-more" type="button"><i class="icon icon-more">펼쳐보기</i>펼쳐보기</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- data table -->
+                <section class="content-dashboard">
+                    <ul class="card-total">
+                        <li class="card-total-item">
+                            <p>배차성공률</p>
+                            <span>81.1<s>%</s></span>
+                        </li>
+                        <li class="card-total-item">
+                            <p>배차실패율</p>
+                            <span>17.9<s>%</s></span>
+                        </li>
+                        <li class="card-total-item">
+                            <p>탑승율</p>
+                            <span>91.2<s>%</s></span>
+                        </li>
+                        <li class="card-total-item">
+                            <p>탑승취소율</p>
+                            <span>8.8<s>%</s></span>
+                        </li>
+                    </ul>
+
+                    <div class="card-divide">
+                        <div class="card-average">
+                            <div class="card-average-item">
+                                <h1>운행거리</h1>
+                                <ul class="list">
+                                    <li>
+                                        <h2>누적</h2>
+                                        <p>1,683.39<s>km</s></p>
+                                    </li>
+                                    <li>
+                                        <h2>일평균</h2>
+                                        <p>841.69<s>km</s></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-average-item">
+                                <h1>운행시간</h1>
+                                <ul class="list">
+                                    <li>
+                                        <h2>누적</h2>
+                                        <p>62<s>시간</s>43<s>분</s></p>
+                                    </li>
+                                    <li>
+                                        <h2>일평균</h2>
+                                        <p>62<s>시간</s>43<s>분</s></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-average-item">
+                                <h1>탑승성공</h1>
+                                <ul class="list">
+                                    <li>
+                                        <h2>누적</h2>
+                                        <p>678<s>건</s></p>
+                                    </li>
+                                    <li>
+                                        <h2>일평균</h2>
+                                        <p>888.5<s>건</s></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-average-item">
+                                <h1>배차불가</h1>
+                                <ul class="list">
+                                    <li>
+                                        <h2>누적</h2>
+                                        <p>182<s>건</s></p>
+                                    </li>
+                                    <li>
+                                        <h2>일평균</h2>
+                                        <p>91<s>건</s></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-average-item">
+                                <h1>탑승전취소</h1>
+                                <ul class="list">
+                                    <li>
+                                        <h2>누적</h2>
+                                        <p>74<s>건</s></p>
+                                    </li>
+                                    <li>
+                                        <h2>일평균</h2>
+                                        <p>37<s>건</s></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-average-item">
+                                <h1>미탑승취소(노쇼)</h1>
+                                <ul class="list">
+                                    <li>
+                                        <h2>누적</h2>
+                                        <p>40<s>건</s></p>
+                                    </li>
+                                    <li>
+                                        <h2>일평균</h2>
+                                        <p>20<s>건</s></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card-average">
+                            <div class="card-chart">
+                                <h1>시간대 별 탑승자 수 (명)</h1>
+                                <div class="chart" id="line-dashBoard"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-divide">
+                        <div class="card-average">
+                            <div class="card-divide-item">
+                                <div class="card-chart donut">
+                                    <h1>전체 운행 현황</h1>
+                                    <div class="chart" id="donut-dashBoard-1"></div>
+                                </div>
+                                <div class="card-chart donut">
+                                    <h1>탑승전취소 사유</h1>
+                                    <div class="chart" id="donut-dashBoard-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-average">
+                            <div class="card-chart">
+                                <h1>시간대 별 운행 현황 (건)</h1>
+                                <div class="chart" id="chart-dashBoard"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-people">
+                        <h1>탑승인원</h1>
+                        <div class="card-people-wrap">
+                            <ul class="people-total">
+                                <li class="people-total-item">
+                                    <h2>누적</h2>
+                                    <p>281<s>명</s></p>
+                                </li>
+                                <li class="people-total-item">
+                                    <h2>일평균</h2>
+                                    <p>281<s>명</s></p>
+                                </li>
+                            </ul>
+
+                            <ul class="people-detail">
+                                <li class="people-detail-item">
+                                    <div class="progress-wrap">
+                                        <!--
+                                            !주석!
+
+                                            성인 평균값에 따라 class="progress-bar"의 width가 바뀜
+                                            퍼센트는 소숫점 첫번째 자리까지 표기
+                                        -->
+                                        <div class="progress-bar" style="width: 50%"></div>
+                                        <p>성인(<s>50.0</s>%)</p>
+                                    </div>
+                                    <ul class="people-detail-sub">
+                                        <li>
+                                            <h3>누적</h3>
+                                            <p>275<s>명</s></p>
+                                        </li>
+                                        <li>
+                                            <h3>일평균</h3>
+                                            <p>275<s>명</s></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="people-detail-item">
+                                    <div class="progress-wrap">
+                                        <!--
+                                            !주석!
+
+                                            청소년 평균값에 따라 class="progress-bar"의 width가 바뀜
+                                            퍼센트는 소숫점 첫번째 자리까지 표기
+                                        -->
+                                        <div class="progress-bar" style="width: 30%"></div>
+                                        <p>청소년(<s>30.0</s>%)</p>
+                                    </div>
+                                    <ul class="people-detail-sub">
+                                        <li>
+                                            <h3>누적</h3>
+                                            <p>6<s>명</s></p>
+                                        </li>
+                                        <li>
+                                            <h3>일평균</h3>
+                                            <p>6<s>명</s></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="people-detail-item">
+                                    <div class="progress-wrap">
+                                        <!--
+                                            !주석!
+
+                                            어린이 평균값에 따라 class="progress-bar"의 width가 바뀜
+                                            퍼센트는 소숫점 첫번째 자리까지 표기
+                                        -->
+                                        <div class="progress-bar" style="width: 20%"></div>
+                                        <p>어린이(<s>20.0</s>%)</p>
+                                    </div>
+                                    <ul class="people-detail-sub">
+                                        <li>
+                                            <h3>누적</h3>
+                                            <p>0<s>명</s></p>
+                                        </li>
+                                        <li>
+                                            <h3>일평균</h3>
+                                            <p>0<s>명</s></p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+            </section>
+        </form>
+    </div>
+</div>
+
+
+<script src="./resources/js/jquery-3.6.1.min.js"></script>
+<script src="./resources/js/jquery-ui.min.js"></script>
+<script src="./resources/js/UI.js"></script>
+<!--dummy data-->
+<script src="./resources/js/chart/example.js"></script>
+<!--chart-->
+<script src="./resources/js/chart/index.js"></script>
+<script src="./resources/js/chart/xy.js"></script>
+<script src="./resources/js/chart/percent.js"></script>
+<script src="./resources/js/chart/Animated.js"></script>
+<script src="./resources/js/chart/chart.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

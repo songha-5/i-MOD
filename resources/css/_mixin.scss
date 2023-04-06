@@ -1,0 +1,85 @@
+$standard-size: 10;
+$urlImg: '../img/';
+
+@function px($px, $context: $standard-size) {
+    @return $px / $context * 1rem;
+}
+
+
+@mixin wft{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin wfn {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@mixin clearfix {
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin pos($p: null,$l: null,$r: null,$t: null,$b: null) {
+    position: $p;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
+}
+
+@mixin elip($type){
+    @if $type == "line1" {
+        display:inline-block;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        word-wrap:normal;
+        overflow:hidden;
+        max-width:100%;
+    }@else if $type == "line2" {
+        overflow:hidden;
+        text-overflow:ellipsis;
+        display:-webkit-box;
+        -webkit-line-clamp:2; /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap:break-word;
+    }
+}
+
+
+@mixin arr($ty:null, $w:null, $h:null, $c:null, $ro:null){
+    display:inline-block;
+    vertical-align:middle;
+    @if $ty == "semo" {
+        width:0;height:0;
+        border-top:$h solid transparent;
+        border-bottom:$h solid transparent;
+        border-left:$w solid $c;
+    }@else if $ty == "arrow" {
+        border-width:1px 1px 0 0;
+        border-style:solid;
+        border-color:$c;
+        width:$w;height:$h;
+        transform: rotate($ro + deg);
+    }@else if $ty == "o" {
+        width:$w;height:$h;
+        background-color:$c;
+        border-radius:50%;
+    }
+}
+
+@mixin transition($code:all, $spd:.25s, $dur:ease, $tm:null){
+    transition:$code $spd $dur $tm;
+}
+
+
+@mixin iscroll($ty:null, $w:null, $h:null){
+    -webkit-overflow-scrolling:touch;
+    width:$w; height:$h;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+
+

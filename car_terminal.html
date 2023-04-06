@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+<body class="admin">
+<div id="wrapper">
+    <nav class="menu">
+        <button class="menu-switch" type="button"><i class="icon icon-menu">메뉴</i></button>
+        <ul class="menu-box">
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-home">메인</i>
+                    <span>메인</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./main_dashboard.html">대시보드</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-people">사용자관리</i>
+                    <span>사용자관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./user_member.html">회원관리</a></li>
+                    <li><a href="./user_driver.html">승무사원관리</a></li>
+                    <li><a href="./user_area.html">지역관리</a></li>
+                    <li><a href="./user_payment.html">결제관리</a></li>
+                    <li><a href="./user_account.html">관리자계정관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-monitor">실시간모니터링</i>
+                    <span>실시간모니터링</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a target="_blank" href="./monitor_dashboard.html">관제</a></li>
+                    <li><a href="./monitor_ridehistory.html">배차요청이력</a></li>
+                    <li><a target="blank" href="./monitor_state.html">차량운행현황</a></li>
+                   <!-- <li><a href="#">노선운행현황</a></li>-->
+                </ul>
+            </li>
+            <!--<li class="menu-box-list">
+                <a>
+                    <i class="icon icon-station">정류장관리</i>
+                    <span>정류장관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="#">정류장관리</a></li>
+                    <li><a href="#">정류장보기</a></li>
+                </ul>
+            </li>-->
+            <li class="menu-box-list active">
+                <a>
+                    <i class="icon icon-busSide">차량관리</i>
+                    <span>차량관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./car_list.html">차량관리</a></li>
+                    <li><a href="./car_terminal.html">단말기관리</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-setting">설정관리</i>
+                    <span>설정관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <!--<li><a href="#">앱 푸시/메시지 발송</a></li>-->
+                    <li><a href="./setting_massage.html">메시지 발송 이력</a></li>
+                    <!--<li><a href="#">페널티관리</a></li>
+                    <li><a href="#">페널티 이력 조회</a></li>
+                    <li><a href="#">노선관리</a></li>
+                    <li><a href="#">노선차량관리</a></li>-->
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-chart">통계</i>
+                    <span>통계</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./stats_passenger.html">탑승객 현황</a></li>
+                    <li><a href="./stats_drive.html">운행 현황</a></li>
+
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-notice">게시판관리</i>
+                    <span>게시판관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./board_notice.html">공지사항</a></li>
+                    <li><a href="./board_qna.html">Q&A</a></li>
+                    <li><a href="./board_faq.html">자주묻는질문(FAQ)</a></li>
+                </ul>
+            </li>
+            <li class="menu-box-list">
+                <a>
+                    <i class="icon icon-devices">시스템관리</i>
+                    <span>시스템관리</span>
+                </a>
+                <ul class="menu-sub">
+                    <li><a href="./system_history.html">장애이력관리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="logo-area">
+        <header class="user">
+            <ul class="user-list">
+                <li><img class="logo" src="resources/img/logo_type2_b.png" alt="mobble로고"></li>
+                <li class="user-list-box">
+                    <button class="name" type="button">김아무개</button>
+                    <span class="time">2022-11-25<span>09:33</span></span>
+                    <button class="btn btn-user" type="button">로그아웃</button>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="main">
+        <form>
+            <section class="header">
+                <header class="user">
+                    <div class="user-list">
+                        <ul class="user-map">
+                            <li>차량관리</li>
+                            <li>단말기관리</li>
+                        </ul>
+                        <div class="btn-wrap">
+                            <button class="btn btn-map" type="button"><i class="icon icon-reset">초기화</i>초기화</button>
+                            <button class="btn btn-map" type="button"><i class="icon icon-search">조회</i>조회</button>
+                            <button class="btn btn-map" type="button" onclick="popupOpen('add','mw')"><i class="icon icon-add">등록</i>등록</button>
+                        </div>
+                    </div>
+                </header>
+            </section>
+
+            <section class="content">
+                <!-- filter -->
+                <section class="content-header">
+                    <div class="table-header">
+                        <table>
+                            <caption>단말기 관리 필터 테이블</caption>
+                            <tbody>
+                                <tr>
+                                    <th>등록일</th>
+                                    <td>
+                                        <div class="datepicker-wrap">
+                                            <div class="datepicker-pair">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                            <div class="datepicker-pair">
+                                                <input type="text" class="datepicker">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>단말 유형</th>
+                                    <td>
+                                        <div class="dropdown-wrap">
+                                            <button class="dropdown-btn" type="button">항목을 선택해주세요</button>
+                                            <div class="dropdown-menu">
+                                                <div class="dropdown-menu-filter">
+                                                    <button class="dropdown-all-check" type="button">전체선택</button>
+                                                    <button class="dropdown-all-none" type="button">전체해제</button>
+                                                </div>
+                                                <ul class="dropdown-menu-list">
+                                                    <li class="dropdown-item"><span>GPS(QR)</span><i class="icon">체크아이콘</i></li>
+                                                    <li class="dropdown-item"><span>차량용DISPLAY</span><i class="icon">체크아이콘</i></li>
+                                                    <li class="dropdown-item"><span>승무사원용태블릿</span><i class="icon">체크아이콘</i></li>
+                                                    <li class="dropdown-item"><span>통합단말</span><i class="icon">체크아이콘</i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>검색어</th>
+                                    <td>
+                                        <div class="ip-wrap">
+                                            <label for="seachWord"></label><input class="ip" type="text" id="seachWord" placeholder="검색어를 입력해주세요" >
+                                            <!--
+                                                !주석!
+
+                                                단말기번호, 단말기식별키, 단말기ID가 검색되게 해주세요
+                                            -->
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-wrap table-more hide">
+                            <button class="btn btn-more" type="button"><i class="icon icon-more">펼쳐보기</i>펼쳐보기</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- data table -->
+                <section class="content-main">
+                    <div class="table-tit">
+                        <span>단말기 정보</span>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <caption>승무사원 정보 테이블</caption>
+                            <colgroup>
+                                <col style="width: 30px"/>
+                                <col style="width: 50px"/>
+                                <col style="width: 70px"/>
+                                <col style="width: 70px"/>
+                                <col style="width: 70px"/>
+                                <col style="width: 120px"/>
+                                <col style="width: 45px"/>
+                                <col style="width: 45px"/>
+                                <col style="width: 45px"/>
+                                <col style="width: 70px"/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <!--
+                                        !주석!
+
+                                        arrow 버튼이 필요없는 버튼은 class="arrow-no"를 추가해주세요
+                                    -->
+                                    <th class="arrow-no">상세보기</th>
+                                    <th>단말유형</th>
+                                    <th>단말기번호</th>
+                                    <th>단말기식별키</th>
+                                    <th>단말기ID</th>
+                                    <th>단말기명</th>
+                                    <th>단말기구입일</th>
+                                    <th>상태</th>
+                                    <th>등록일시</th>
+                                    <th>수정일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="btn-wrap">
+                                            <button class="btn btn-table disabled" type="button" disabled>상세보기</button>
+                                        </div>
+                                    </td>
+                                    <td>통합단말</td>
+                                    <td>56a6e57c614de998</td>
+                                    <td></td>
+                                    <td>D0000000171</td>
+                                    <td>통합단말-대구3호차</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>정상</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>YYYY-MM-DD HH:MM:SS</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="btn-wrap">
+                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                        </div>
+                                    </td>
+                                    <td>승무사원용태블릿</td>
+                                    <td>56a6e57c614de998</td>
+                                    <td>7d92be18fac2b844</td>
+                                    <td>D0000000171</td>
+                                    <td>(영종)5호차 승무사원 단말기</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>정상</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>YYYY-MM-DD HH:MM:SS</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="btn-wrap">
+                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                        </div>
+                                    </td>
+                                    <td>GPS(QR)</td>
+                                    <td>56a6e57c614de998</td>
+                                    <td>7d92be18fac2b844</td>
+                                    <td>D0000000171</td>
+                                    <td>통합단말-대구3호차</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>정상</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>YYYY-MM-DD HH:MM:SS</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="btn-wrap">
+                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                        </div>
+                                    </td>
+                                    <td>차량용DISPLAY</td>
+                                    <td>56a6e57c614de998</td>
+                                    <td>7d92be18fac2b844</td>
+                                    <td>D0000000171</td>
+                                    <td>통합단말-대구3호차</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>비정상</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>YYYY-MM-DD HH:MM:SS</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="btn-wrap">
+                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                        </div>
+                                    </td>
+                                    <td>통합단말</td>
+                                    <td>56a6e57c614de998</td>
+                                    <td>7d92be18fac2b844</td>
+                                    <td>D0000000171</td>
+                                    <td>신규</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>사용중지</td>
+                                    <td>YYYY-MM-DD</td>
+                                    <td>YYYY-MM-DD HH:MM:SS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 데이터 없을 시-->
+                    <!--<div class="table">
+                        <span class="nodata">데이터가 없습니다.</span>
+                    </div>-->
+
+
+                    <div class="table-footer">
+                        <div class="data-count">
+                            <span>total: <b>5</b></span>
+                            <span>Result: <b>5</b></span>
+                        </div>
+                        <ul class="pagenation">
+                            <li><a href="#"><i class="icon icon-first">처음 페이지</i></a></li>
+                            <li><a href="#"><i class="icon icon-prev">이전 페이지</i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#"><i class="icon icon-next">다음 페이지</i></a></li>
+                            <li><a href="#"><i class="icon icon-last">마지막 페이지</i></a></li>
+                        </ul>
+                        <div class="select-wrap">
+                            <label>
+                                <select name="listMax">
+                                    <option value="10">10개씩 보기</option>
+                                    <option value="20">20개씩 보기</option>
+                                    <option value="30">30개씩 보기</option>
+                                    <option value="50">50개씩 보기</option>
+                                    <option value="500" selected>100개씩 보기</option>
+                                    <option value="500">500개씩 보기</option>
+                                    <option value="1000">1000개씩 보기</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </form>
+    </div>
+</div>
+
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+
+    !등록 팝업!
+    : id = "mw-add"
+    등록 버튼 선택 시 뜨는 팝업
+
+    !수정 팝업!
+    : id = "mw-addDetail"
+    차량정보 > 상세보기 선택 시 뜨는 팝업
+-->
+
+<div id="mw-add" class="ly-pop ly-regi ndim">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>차량관리</li>
+                    <li>단말기 관리</li>
+                    <li>등록</li>
+                </ul>
+                <div class="btn-wrap">
+                    <button class="btn btn-close" type="button" onclick="popupClose('add','mw')"><i class="icon icon-close">닫기</i></button>
+                </div>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>단말기 정보</span>
+                            <div class="btn-wrap">
+                                <button class="btn btn-table" type="button">저장</button>
+                        </div>
+                    </div>
+                    <table class="pop-table">
+                        <caption>단말기 정보 입력 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>단말기종류 *</th>
+                                <td>
+                                    <div class="select-wrap">
+                                        <label>
+                                            <select name="terminalType" required>
+                                                <option value="" disabled selected>선택</option>
+                                                <option value="GPS(QR)">GPS(QR)</option>
+                                                <option value="차량용DISPLAY">차량용DISPLAY</option>
+                                                <option value="승무사원용태블릿">승무사원용태블릿</option>
+                                                <option value="통합단말">통합단말</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </td>
+                                <th>단말기명 *</th>
+                                <td>
+                                    <div class="ip-wrap">
+                                        <label>
+                                            <input class="ip" type="text" placeholder="단말기명 입력" />
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>단말기번호 *</th>
+                                <td>
+                                    <div class="ip-wrap">
+                                        <label>
+                                            <input class="ip" type="text" placeholder="단말기 번호 입력" />
+                                        </label>
+                                    </div>
+                                </td>
+                                <th>단말기식별키(인증용)</th>
+                                <td>
+                                    <div class="ip-wrap">
+                                        <label>
+                                            <input class="ip" type="text" placeholder="단말기 식별키 입력" />
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>단말기 구입일</th>
+                                <td>
+                                    <div class="datepicker-wrap">
+                                        <label>
+                                            <input type="text" class="datepicker">
+                                        </label>
+                                    </div>
+                                </td>
+                                <th>비고</th>
+                                <td>
+                                    <div class="ip-wrap">
+                                        <label>
+                                            <input class="ip" type="text" placeholder="비고 입력" />
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>부가 정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>부가 정보 입력 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>소속운영사 *</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="companyType">
+                                            <option value="CL" selected>CL</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기상태</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="stateType" required>
+                                            <option value="" disabled selected>선택</option>
+                                            <option value="정상">정상</option>
+                                            <option value="비정상">비정상</option>
+                                            <option value="사용중지">사용중지</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<div id="mw-addDetail" class="ly-pop ly-regi ndim">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>차량관리</li>
+                    <li>단말기 관리</li>
+                    <li>상세보기</li>
+                </ul>
+                <div class="btn-wrap">
+                    <button class="btn btn-close" type="button" onclick="popupClose('addDetail','mw')"><i class="icon icon-close">닫기</i></button>
+                </div>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>단말기 정보</span>
+                        <div class="btn-wrap">
+                            <button class="btn btn-table" type="button">저장</button>
+                        </div>
+                    </div>
+                    <table class="pop-table">
+                        <caption>단말기 정보 입력 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>단말기종류 *</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="terminalType" required>
+                                            <option value="" disabled >선택</option>
+                                            <option value="GPS(QR)">GPS(QR)</option>
+                                            <option value="차량용DISPLAY" selected>차량용DISPLAY</option>
+                                            <option value="승무사원용태블릿">승무사원용태블릿</option>
+                                            <option value="통합단말">통합단말</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기명 *</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="통합단말-대구1호차" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>단말기번호 *</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="1f63de79478e74c2" />
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기식별키(인증용)</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>단말기 구입일</th>
+                            <td>
+                                <div class="datepicker-wrap">
+                                    <label>
+                                        <input type="text" class="datepicker">
+                                    </label>
+                                </div>
+                            </td>
+                            <th>비고</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="6월 4일 13:00 매핑 완료" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>부가 정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>부가 정보 입력 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>소속운영사 *</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="companyType">
+                                            <option value="CL" selected>CL</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기상태</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="stateType" required>
+                                            <option value="" disabled>선택</option>
+                                            <option value="정상" selected>정상</option>
+                                            <option value="비정상">비정상</option>
+                                            <option value="사용중지">사용중지</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+<script src="./resources/js/jquery-3.6.1.min.js"></script>
+<script src="./resources/js/jquery-ui.min.js"></script>
+<script src="./resources/js/UI.js"></script>
+<script>
+$(function () {
+});
+</script>
+
+</body>
+</html>

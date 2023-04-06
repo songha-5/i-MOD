@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+<body class="map">
+<div id="wrapper">
+
+    <!-- 좌측 슬라이드 메뉴 -->
+    <section class="side-menu">
+        <button class="side-menu-button active" type="button"><i class="icon icon-arrow">메뉴 버튼 아이콘</i></button>
+        <div class="filter">
+            <div class="filter-item">
+                <span class="filter-name">차량명</span>
+                <div class="ip-wrap">
+                    <input class="ip" type="text" id="seachWord" placeholder="검색어를 입력해주세요" >
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button class="btn btn-full" type="button">조회</button>
+            </div>
+        </div>
+        <div class="table table-md table-select">
+            <table>
+                <caption>차량 GPS 일시</caption>
+                <colgroup>
+                    <col style="width:10%;" />
+                    <col style="width:30%;" />
+                    <col style="width:50%;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>순번</th>
+                        <th>차량명</th>
+                        <th>최종 GPS 일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active">
+                        <td>1</td>
+                        <td class="center">
+                            <!--
+                                !주석!
+
+                                bus-1 ~ bus-20 까지 있으며,
+                                각자 다른 컬러가 지정되어 있습니다.
+                            -->
+                            <span class="bus-1">대구 잡아타 1호차</span>
+                        </td>
+                        <td>YYYY-MM-DD HH:MM:SS</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="center">
+                            <span class="bus-2">대구 잡아타 1호차</span>
+                        </td>
+                        <td>YYYY-MM-DD HH:MM:SS</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="center">
+                            <span class="bus-3">대구 잡아타 1호차</span>
+                        </td>
+                        <td>YYYY-MM-DD HH:MM:SS</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="center">
+                            <span class="bus-4">대구 잡아타 1호차</span>
+                        </td>
+                        <td>YYYY-MM-DD HH:MM:SS</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="center">
+                            <span class="bus-5">대구 잡아타 1호차</span>
+                        </td>
+                        <td>YYYY-MM-DD HH:MM:SS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 우측 슬라이드 메뉴 -->
+    <section class="side-menu-right">
+        <button class="side-menu-button active" type="button"><i class="icon icon-arrow">메뉴 버튼 아이콘</i></button>
+        <div class="filter">
+            <div class="filter-item">
+                <span class="filter-name">운행 일자</span>
+                <div class="datepicker-wrap">
+                    <input type="text" class="datepicker">
+                </div>
+            </div>
+            <div class="filter-item">
+                <span class="filter-name">운행 시간</span>
+                <div class="filter-split">
+                    <div class="chk-wrap">
+                        <span class="chk-box">
+                            <input type="checkbox" name="rememberChk" id="timeChk" value="" />
+                            <label for="timeChk"></label>
+                        </span>
+                    </div>
+                    <div class="select-wrap">
+                        <select name="timeFirstH">
+                            <option value="05시" selected>05시</option>
+                            <option value="06시">06시</option>
+                            <option value="07시">07시</option>
+                            <option value="08시">08시</option>
+                            <option value="09시">09시</option>
+                            <option value="10시">10시</option>
+                            <option value="11시">11시</option>
+                            <option value="12시">12시</option>
+                            <option value="13시">13시</option>
+                            <option value="14시">14시</option>
+                            <option value="15시">15시</option>
+                            <option value="16시">16시</option>
+                            <option value="17시">17시</option>
+                            <option value="18시">18시</option>
+                            <option value="19시">19시</option>
+                            <option value="20시">20시</option>
+                            <option value="21시">21시</option>
+                            <option value="22시">22시</option>
+                            <option value="23시">23시</option>
+                            <option value="24시">24시</option>
+                        </select>
+                    </div>
+                    <div class="select-wrap">
+                        <select name="timeFirstS">
+                            <option value="00분" selected>00분</option>
+                            <option value="01분">01분</option>
+                            <option value="02분">02분</option>
+                            <option value="03분">03분</option>
+                            <option value="04분">04분</option>
+                            <option value="05분">05분</option>
+                            <option value="06분">06분</option>
+                            <option value="07분">07분</option>
+                            <option value="08분">08분</option>
+                            <option value="09분">09분</option>
+                            <option value="10분">10분</option>
+                            <option value="11분">11분</option>
+                            <option value="12분">12분</option>
+                            <option value="13분">13분</option>
+                            <option value="14분">14분</option>
+                            <option value="15분">15분</option>
+                            <option value="16분">16분</option>
+                            <option value="17분">17분</option>
+                            <option value="18분">18분</option>
+                            <option value="19분">19분</option>
+                            <option value="20분">20분</option>
+                            <option value="21분">21분</option>
+                            <option value="22분">22분</option>
+                            <option value="23분">23분</option>
+                            <option value="24분">24분</option>
+                            <option value="25분">25분</option>
+                            <option value="26분">26분</option>
+                            <option value="27분">27분</option>
+                            <option value="28분">28분</option>
+                            <option value="29분">29분</option>
+                            <option value="30분">30분</option>
+                            <option value="31분">31분</option>
+                            <option value="32분">32분</option>
+                            <option value="33분">33분</option>
+                            <option value="34분">34분</option>
+                            <option value="35분">35분</option>
+                            <option value="36분">36분</option>
+                            <option value="37분">37분</option>
+                            <option value="38분">38분</option>
+                            <option value="39분">39분</option>
+                            <option value="40분">40분</option>
+                            <option value="41분">41분</option>
+                            <option value="42분">42분</option>
+                            <option value="43분">43분</option>
+                            <option value="44분">44분</option>
+                            <option value="45분">45분</option>
+                            <option value="46분">46분</option>
+                            <option value="47분">47분</option>
+                            <option value="48분">48분</option>
+                            <option value="49분">49분</option>
+                            <option value="50분">50분</option>
+                            <option value="51분">51분</option>
+                            <option value="52분">52분</option>
+                            <option value="53분">53분</option>
+                            <option value="54분">54분</option>
+                            <option value="55분">55분</option>
+                            <option value="56분">56분</option>
+                            <option value="57분">57분</option>
+                            <option value="58분">58분</option>
+                            <option value="59분">59분</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-split">
+                    <div class="select-wrap">
+                        <select name="timeFirstH">
+                            <option value="05시">05시</option>
+                            <option value="06시">06시</option>
+                            <option value="07시">07시</option>
+                            <option value="08시">08시</option>
+                            <option value="09시">09시</option>
+                            <option value="10시">10시</option>
+                            <option value="11시">11시</option>
+                            <option value="12시">12시</option>
+                            <option value="13시">13시</option>
+                            <option value="14시">14시</option>
+                            <option value="15시">15시</option>
+                            <option value="16시">16시</option>
+                            <option value="17시">17시</option>
+                            <option value="18시">18시</option>
+                            <option value="19시">19시</option>
+                            <option value="20시">20시</option>
+                            <option value="21시">21시</option>
+                            <option value="22시">22시</option>
+                            <option value="23시" selected>23시</option>
+                            <option value="24시">24시</option>
+                        </select>
+                    </div>
+                    <div class="select-wrap">
+                        <select name="timeFirstS">
+                            <option value="00분">00분</option>
+                            <option value="01분">01분</option>
+                            <option value="02분">02분</option>
+                            <option value="03분">03분</option>
+                            <option value="04분">04분</option>
+                            <option value="05분">05분</option>
+                            <option value="06분">06분</option>
+                            <option value="07분">07분</option>
+                            <option value="08분">08분</option>
+                            <option value="09분">09분</option>
+                            <option value="10분">10분</option>
+                            <option value="11분">11분</option>
+                            <option value="12분">12분</option>
+                            <option value="13분">13분</option>
+                            <option value="14분">14분</option>
+                            <option value="15분">15분</option>
+                            <option value="16분">16분</option>
+                            <option value="17분">17분</option>
+                            <option value="18분">18분</option>
+                            <option value="19분">19분</option>
+                            <option value="20분">20분</option>
+                            <option value="21분">21분</option>
+                            <option value="22분">22분</option>
+                            <option value="23분">23분</option>
+                            <option value="24분">24분</option>
+                            <option value="25분">25분</option>
+                            <option value="26분">26분</option>
+                            <option value="27분">27분</option>
+                            <option value="28분">28분</option>
+                            <option value="29분">29분</option>
+                            <option value="30분" selected>30분</option>
+                            <option value="31분">31분</option>
+                            <option value="32분">32분</option>
+                            <option value="33분">33분</option>
+                            <option value="34분">34분</option>
+                            <option value="35분">35분</option>
+                            <option value="36분">36분</option>
+                            <option value="37분">37분</option>
+                            <option value="38분">38분</option>
+                            <option value="39분">39분</option>
+                            <option value="40분">40분</option>
+                            <option value="41분">41분</option>
+                            <option value="42분">42분</option>
+                            <option value="43분">43분</option>
+                            <option value="44분">44분</option>
+                            <option value="45분">45분</option>
+                            <option value="46분">46분</option>
+                            <option value="47분">47분</option>
+                            <option value="48분">48분</option>
+                            <option value="49분">49분</option>
+                            <option value="50분">50분</option>
+                            <option value="51분">51분</option>
+                            <option value="52분">52분</option>
+                            <option value="53분">53분</option>
+                            <option value="54분">54분</option>
+                            <option value="55분">55분</option>
+                            <option value="56분">56분</option>
+                            <option value="57분">57분</option>
+                            <option value="58분">58분</option>
+                            <option value="59분">59분</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-item">
+                <span class="filter-name">유형</span>
+                <div class="dropdown-wrap">
+                    <button class="dropdown-btn" type="button">항목을 선택해주세요</button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-filter">
+                            <button class="dropdown-all-check" type="button">전체선택</button>
+                            <button class="dropdown-all-none" type="button">전체해제</button>
+                        </div>
+                        <ul class="dropdown-menu-list">
+                            <li class="dropdown-item"><span>운행시작</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>운행종료예약</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>도착처리</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>GPS수집</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>운행종료</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>휴식중</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>휴식예약</span><i class="icon">체크아이콘</i></li>
+                            <li class="dropdown-item"><span>운행재개</span><i class="icon">체크아이콘</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-item">
+                <span class="filter-name">옵션</span>
+                    <div class="chk-wrap">
+                        <span class="chk-box">
+                            <input type="checkbox" name="rememberChk" id="second" value="" />
+                            <label for="second">초단위</label>
+                        </span>
+                    </div>
+                    <div class="chk-wrap">
+                        <span class="chk-box">
+                            <input type="checkbox" name="rememberChk" id="line" value="" />
+                            <label for="line">궤적</label>
+                        </span>
+                    </div>
+                    <div class="chk-wrap">
+                        <span class="chk-box">
+                            <input type="checkbox" name="rememberChk" id="busstop" value="" />
+                            <label for="busstop">정류장</label>
+                        </span>
+                    </div>
+                    <div class="chk-wrap">
+                        <span class="chk-box">
+                            <input type="checkbox" name="rememberChk" id="all" value="" />
+                            <label for="all">전체보기</label>
+                        </span>
+                    </div>
+                </div>
+            <div class="btn-wrap btn-twin">
+                <button class="btn btn-full" type="button">조회</button>
+                <button class="btn btn-full" type="button">엑셀다운</button>
+            </div>
+        </div>
+
+        <div class="monitor-detail">
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <!--
+                    !주석!
+                    유형에 따른 컬러 변경
+
+                    state-gps : gps수집
+                    state-in : 도착 ( 승차 )
+                    state-out :  도착 ( 하차 )
+                    state-inout : 도착 ( 승하차 )
+                    state-preRest : 휴식 예정
+                    state-rest : 휴식중
+                    state-continue : 운행재개
+                    state-preFinish : 종료예정
+                    state-finish : 종료
+                    -->
+                    <s class="state-start">운행시작</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>지역 : <span>대구</span></li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-gps">GPS수집</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-sub">위치보기</button>
+                    </div>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-bus">버스아이콘</i>방향/속도 : <b>220</b>도 / <b>0</b>km/h</li>
+                    <li><i class="icon icon-bus">버스아이콘</i>위도/경도 : 37.590973,126.67321</li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-gps">GPS수집</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-sub">위치보기</button>
+                    </div>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-bus">버스아이콘</i>방향/속도 : <b>220</b>도 / <b>0</b>km/h</li>
+                    <li><i class="icon icon-bus">버스아이콘</i>위도/경도 : 37.590973,126.67321</li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-gps">GPS수집</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-sub">위치보기</button>
+                    </div>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-bus">버스아이콘</i>방향/속도 : <b>220</b>도 / <b>0</b>km/h</li>
+                    <li><i class="icon icon-bus">버스아이콘</i>위도/경도 : 37.590973,126.67321</li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-in">도착처리</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>정류장명 : 8. XXX역(가나다라아파트 방면)</li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-out">도착처리</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>정류장명 : 8. XXX역(가나다라아파트 방면)</li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-inout">도착처리</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>정류장명 : <span>1. [D] 인천해든초등학교(서로3로·예미지퍼스트포레 방면)</span></li>
+                </ul>
+            </div>
+
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-preRest">휴식예약</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-rest">휴식중</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-continue">운행재개</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>지역 : <span>대구</span></li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-preFinish">운행종료예약</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>사유 : <span>정비</span></li>
+                </ul>
+            </div>
+            <div class="monitor-detail-item">
+                <div class="userinfo">
+                    <s class="state-finish">운행종료</s>
+                    <span class="number">YYYY-MM-DD HH:MM:SS</span>
+                </div>
+                <ul class="list">
+                    <li><i class="icon icon-roundUser">유저아이콘</i>기사명 : <span>가나다</span></li>
+                    <li><i class="icon icon-bus">버스아이콘</i>사유 : <span>정비</span></li>
+                </ul>
+            </div>
+            
+            
+            <!--
+            !리스트 없을 시!
+            -->
+            <!--<div class="nodata-wrap">
+                <span class="nodata"><i class="icon icon-nodata">검색아이콘</i>데이터가 없습니다.</span>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- 아이콘 인포 -->
+    <div class="bus-wrap bus-busstop">
+        <ul class="sub-info">
+            <li class="sub-info-item">
+                <p>속도</p>
+                <ul>
+                    <li><i class="map-icon-speed speed-1"></i>60km/h 이하</li>
+                    <li><i class="map-icon-speed speed-2"></i>80km/h 이하</li>
+                    <li><i class="map-icon-speed speed-3"></i>110km/h 이하</li>
+                    <li><i class="map-icon-speed speed-4"></i>110km/h 초과</li>
+                </ul>
+            </li>
+            <li class="sub-info-item">
+                <p>정류장</p>
+                <ul>
+                    <li><i class="map-icon-busstop busstop-in" data-count="1"></i>승차</li>
+                    <li><i class="map-icon-busstop busstop-out" data-count="1"></i>하차</li>
+                    <li><i class="map-icon-busstop busstop-inout" data-count="1"></i>승/하차</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="map-wrap">
+        <!-- 버스 승/하차 아이콘 -->
+        <!--
+            !아이콘 타입!
+            case 1: 승차 - 승차시 뜨는 아이콘 class="busstop-in"
+            case 2: 하차 - 하차시 뜨는 아이콘 class="busstop-out"
+            case 3: 승하차 - 승하차시 뜨는 아이콘 class="busstop-inout"
+            * 케이스별 아이콘 색상이 다름
+
+            !아이콘 위치지정!
+            class="map-icon-busstop"의 포지션값(left,right,top,bottom)을 이용해 위치지정
+            ** 아래 스타일 지정해둔 부분은 예시입니다 지우시고 사용하셔도됩니다
+
+            !아이콘 선택시 팝업!
+            class="map-busstop-wrap"로, 아이콘 위에 팝업으로 표기됩니다.
+
+            !아이콘 안의 숫자 컨트롤!
+            class="map-icon-busstop"의 data-count="XX"로 숫자를 그립니다.
+        -->
+        <i class="map-icon-busstop busstop-in active" data-count="1" style="bottom: 40px; left: 660px"></i>
+        <i class="map-icon-busstop busstop-out" data-count="10" style="bottom: 40px; left: 700px"></i>
+        <i class="map-icon-busstop busstop-inout" data-count="12" style="bottom: 40px; left: 740px"></i>
+
+
+        <!-- 차량 속도 아이콘 -->
+        <!--
+           !아이콘 타입!
+            case 1: 60km/h 이하 class="speed-1"
+            case 2: 80km/h 이하 class="speed-2"
+            case 3: 110km/h 이하 class="speed-3"
+            case 4: 110km/h 초과 class="speed-4"
+            * 케이스별 아이콘 색상/이미지가 다름
+
+            !아이콘 위치지정!
+            class="map-icon-speed"의 포지션값(left,right,top,bottom)을 이용해 위치지정
+            ** 아래 스타일 지정해둔 부분은 예시입니다 지우시고 사용하셔도됩니다
+            *** 아이콘 기본방향은 위쪽으로해두었습니다.
+
+            !GPS위치보기 선택시 해당 아이콘에 active!
+            class="map-icon-speed speed-1 active"으로, class="active"가 추가됩니다.
+
+            !아이콘 회전!
+            class="rotate-1 ~ 360"을 추가하면 아이콘이 회전합니다.
+        -->
+        <i class="map-icon-speed speed-1 active" style="bottom: 40px; left: 500px"></i>
+        <i class="map-icon-speed speed-2" style="bottom: 40px; left: 540px"></i>
+        <i class="map-icon-speed speed-3" style="bottom: 40px; left: 580px"></i>
+        <i class="map-icon-speed speed-4" style="bottom: 40px; left: 620px"></i>
+
+        <i class="map-icon-speed speed-1 rotate-1" style="bottom: 65px; left: 500px"></i>
+        <i class="map-icon-speed speed-2 rotate-90" style="bottom: 65px; left: 540px"></i>
+        <i class="map-icon-speed speed-3 rotate-180" style="bottom: 65px; left: 580px"></i>
+        <i class="map-icon-speed speed-4 rotate-270" style="bottom: 65px; left: 620px"></i>
+    </div>
+</div>
+
+<script src="./resources/js/jquery-3.6.1.min.js"></script>
+<script src="./resources/js/jquery-ui.min.js"></script>
+<script src="./resources/js/UI.js"></script>
+<script>
+$(function () {
+});
+</script>
+</body>
+</html>
