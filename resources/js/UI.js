@@ -137,7 +137,6 @@ function mapBusstop(){
 }
 
 // 팝업센터
-
 const popupCenter = ({url, title, w, h}) => {
 	var dualScreenLeft = window.screenLeft !==  undefined ? window.screenLeft : window.screenX;
 	var dualScreenTop = window.screenTop !==  undefined   ? window.screenTop  : window.screenY;
@@ -529,6 +528,25 @@ UI.carGps = {
 
 
 
+
+// 팝업 - acc tap
+UI.popAcc = {
+	init: function (){
+		var acc = $(".acc .acc-item");
+
+		acc.each(function(idx){
+			var _this = $(this),
+				subItem = _this.find(".acc-item-tit");
+
+			var test = _this.find(".acc-sub");
+
+			_this.click(function () {
+				_this.toggleClass("active");
+				// $(this).toggleClass("active"); // this just rotates the expander arrow
+			});
+		})
+	}
+}
 // 팝업 - 체크박스따라 display 전환
 UI.popChk = {
 	init: function () {
@@ -598,4 +616,5 @@ $(function(){
 	hasJqueryObject(UI.$body.find("i[class^=map-icon-]")) && UI.mapIcon.init();
 	//팝업
 	hasJqueryObject(UI.$body.find(".evt-chk-trigger")) && UI.popChk.init();
+	hasJqueryObject(UI.$body.find(".acc-wrap")) && UI.popAcc.init();
 });

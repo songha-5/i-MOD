@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+
+    !등록 팝업!
+    : id = "mw-addDetail-2"
+    상세보기 버튼 선택 시 뜨는 팝업
+-->
+<div class="ly-system ly-regi">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>시스템관리</li>
+                    <li>장애이력관리</li>
+                    <li>상세보기</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>처리정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>처리정보 리스트 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>처리번호</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="12 -1" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>요청자</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="가나다 / 01011111111" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>조치담당</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="CL" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>접수일</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="YYYY-MM-DD HH:MM" disabled />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>진행상태</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="완료" disabled />
+                                    </label>
+                                </div>
+                            </td>
+                            <th colspan="2"></th>
+                        </tr>
+                        <tr>
+                            <th>처리내용</th>
+                            <td colspan="3">
+                                <div class="qna-wrap">
+                                        <textarea disabled>안녕하세요. 이슈 내용 원인과 조치 사항 공유 드립니다.
+
+1. SHUTTLE 1호 차량 예약 고객의 미탑승 처리 불가 사유
+>>> 해당 사용자는 차량 출발 전 사용자께서 직접 배차 취소를 진행하였고
+진행하는 도중 내부 데이터 수정 과정에서 호출 시기가 많이 몰려 처리 시 타임아웃
+에러가 발생하였습니다. 떼문에 차량 출발 시 해당 사용자의 정보가 누락된 채로
+차량이 출발하여 해당 문제가 발생된 것으로 확인되었습니다.
+>>> 이는 타임아웃 기준 시간 5초에서 10초로 증대하여 조치하도록 하겠습니다.
+
+2. 미탑승 고객 다수 발생
+>>> 해당 원인은 차량 운행 처리 전에 미리 QR 태깅을 하였고 운행 시작 이후
+재태깅 절차가 없어 모두 노쇼되신 것으로 확인됩니다.
+
+해당 노선의 차량 출발 시간은 08시 09분 경으로 노쇼 처리된 사용자분들 모두
+운행 시작 시간 이전에 태깅하신 사용자들로 반드시 차량 출발 시 운행 시작을
+진행하시고 운행하셔야 하며 만일, 위와 같은 상황이 벌어진 경우 운행 시작 이후
+재태깅하시면 탑승 처리가 가능하십니다.
+
+감사합니다.</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>첨부파일</th>
+                            <td class="scroll-wrap" colspan="3">
+                                <div class="btn-wrap">
+                                    <button class="btn btn-download">대기</button>
+                                    <button class="btn btn-download">고객</button>
+                                    <button class="btn btn-download">노쇼</button>
+                                    <button class="btn btn-download">태블릿</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>파일첨부</th>
+                            <td colspan="3">
+                                <div class="btn-wrap">
+                                    <button class="btn btn-upload">파일 선택</button>
+                                    <span>선택된 파일 없음</span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

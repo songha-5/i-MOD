@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+    !수정 팝업!
+    : id = "mw-addDetail"
+    차량정보 > 상세보기 선택 시 뜨는 팝업
+-->
+
+<div class="ly-system ly-regi">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>차량관리</li>
+                    <li>단말기 관리</li>
+                    <li>상세보기</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>단말기 정보</span>
+                        <div class="btn-wrap">
+                            <button class="btn btn-table" type="button">저장</button>
+                        </div>
+                    </div>
+                    <table class="pop-table">
+                        <caption>단말기 정보 입력 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>단말기종류 *</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="terminalType" required>
+                                            <option value="" disabled >선택</option>
+                                            <option value="GPS(QR)">GPS(QR)</option>
+                                            <option value="차량용DISPLAY" selected>차량용DISPLAY</option>
+                                            <option value="승무사원용태블릿">승무사원용태블릿</option>
+                                            <option value="통합단말">통합단말</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기명 *</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="통합단말-대구1호차" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>단말기번호 *</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="1f63de79478e74c2" />
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기식별키(인증용)</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>단말기 구입일</th>
+                            <td>
+                                <div class="datepicker-wrap">
+                                    <label>
+                                        <input type="text" class="datepicker">
+                                    </label>
+                                </div>
+                            </td>
+                            <th>비고</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="6월 4일 13:00 매핑 완료" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>부가 정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>부가 정보 입력 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>소속운영사 *</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="companyType">
+                                            <option value="CL" selected>CL</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>단말기상태</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="stateType" required>
+                                            <option value="" disabled>선택</option>
+                                            <option value="정상" selected>정상</option>
+                                            <option value="비정상">비정상</option>
+                                            <option value="사용중지">사용중지</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

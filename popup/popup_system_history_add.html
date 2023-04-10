@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+
+    !등록 팝업!
+    : id = "mw-add"
+    등록 버튼 선택 시 뜨는 팝업
+-->
+<div class="ly-system ly-regi">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>시스템관리</li>
+                    <li>장애이력관리</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>요청정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>요청정보 리스트 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>요청번호</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="12" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>요청제목</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>장애유형</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="memberType">
+                                            <option value="선택" selected>선택</option>
+                                            <option value="단말기장애-운전자">단말기장애-운전자</option>
+                                            <option value="단말기장애-사용자">단말기장애-사용자</option>
+                                            <option value="단말기장애-GPS">단말기장애-GPS</option>
+                                            <option value="단말기장애-QR">단말기장애-QR</option>
+                                            <option value="일반문의">일반문의</option>
+                                            <option value="자료요청">자료요청</option>
+                                            <option value="기타">기타</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>지역</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="memberType">
+                                            <option value="선택" selected>선택</option>
+                                            <option value="대구">대구</option>
+                                            <option value="화천">화천</option>
+                                            <option value="강릉">강릉</option>
+                                            <option value="영종도">영종도</option>
+                                            <option value="DIFA">DIFA</option>
+                                            <option value="AMOD">AMOD</option>
+                                            <option value="세종 잡아타">세종 잡아타</option>
+                                            <option value="서울 중구 다산동">서울 중구 다산동</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청자</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="가나다" />
+                                    </label>
+                                </div>
+                            </td>
+                            <th>요청자 연락처</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="number" value="01011111111" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청일</th>
+                            <td>
+                                <div class="datepicker-wrap">
+                                    <input type="text" class="datepicker">
+                                </div>
+                            </td>
+                            <th>완료예정일</th>
+                            <td>
+                                <div class="datepicker-wrap">
+                                    <input type="text" class="datepicker">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>접수자</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="가나다" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>조치담당</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="memberType">
+                                            <option value="CL" selected>CL</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청내용</th>
+                            <td colspan="3">
+                                <div class="qna-wrap">
+                                    <textarea></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>첨부파일</th>
+                            <td class="scroll-wrap" colspan="3">
+                                <div class="btn-wrap">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>파일첨부</th>
+                            <td colspan="3">
+                                <div class="btn-wrap">
+                                    <button class="btn btn-upload">파일 선택</button>
+                                    <span>선택된 파일 없음</span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>요청처리결과</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>요청정보 리스트 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>최종결과</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="진행중" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <!--
+                                !주석!
+
+                                해당내용이 없다면 공란으로 비워주세요
+                            -->
+                            <th>처리완료일</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="YYYY/MM/DD" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

@@ -141,7 +141,7 @@
                         <div class="btn-wrap">
                             <button class="btn btn-map" type="button"><i class="icon icon-reset">초기화</i>초기화</button>
                             <button class="btn btn-map" type="button"><i class="icon icon-search">조회</i>조회</button>
-                            <button class="btn btn-map" type="button" onclick="popupOpen('add','mw')"><i class="icon icon-add">등록</i>등록</button>
+                            <button class="btn btn-map" type="button" onclick="popupCenter({url:'./popup/popup_car_terminal_add.html', title: 'popup_car_terminal_add', w: 692, h: 520})"><i class="icon icon-add">등록</i>등록</button>
                         </div>
                     </div>
                 </header>
@@ -169,7 +169,9 @@
                                     <th>단말 유형</th>
                                     <td>
                                         <div class="dropdown-wrap">
-                                            <button class="dropdown-btn" type="button">항목을 선택해주세요</button>
+                                            <button class="dropdown-btn" type="button">
+                                                <div class="dropdown-btn-inner">항목을 선택해주세요</div>
+                                            </button>
                                             <div class="dropdown-menu">
                                                 <div class="dropdown-menu-filter">
                                                     <button class="dropdown-all-check" type="button">전체선택</button>
@@ -263,7 +265,7 @@
                                 <tr>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_car_terminal_addDetail.html', title: 'popup_car_terminal_addDetail', w: 692, h: 520})">상세보기</button>
                                         </div>
                                     </td>
                                     <td>승무사원용태블릿</td>
@@ -279,7 +281,7 @@
                                 <tr>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_car_terminal_addDetail.html', title: 'popup_car_terminal_addDetail', w: 692, h: 520})">상세보기</button>
                                         </div>
                                     </td>
                                     <td>GPS(QR)</td>
@@ -295,7 +297,7 @@
                                 <tr>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_car_terminal_addDetail.html', title: 'popup_car_terminal_addDetail', w: 692, h: 520})">상세보기</button>
                                         </div>
                                     </td>
                                     <td>차량용DISPLAY</td>
@@ -311,7 +313,7 @@
                                 <tr>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('addDetail','mw')">상세보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_car_terminal_addDetail.html', title: 'popup_car_terminal_addDetail', w: 692, h: 520})">상세보기</button>
                                         </div>
                                     </td>
                                     <td>통합단말</td>
@@ -379,6 +381,7 @@
     : id = "mw-addDetail"
     차량정보 > 상세보기 선택 시 뜨는 팝업
 -->
+<!--
 
 <div id="mw-add" class="ly-pop ly-regi ndim">
     <div class="wrap">
@@ -660,6 +663,7 @@
     </div>
 </div>
 
+-->
 
 <script src="./resources/js/jquery-3.6.1.min.js"></script>
 <script src="./resources/js/jquery-ui.min.js"></script>

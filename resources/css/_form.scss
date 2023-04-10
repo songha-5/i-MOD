@@ -154,6 +154,43 @@
     &-wrap {
         @include chkImg();
     }
+
+    &-all {
+        margin-left: px(10);
+        margin-bottom: px(10);
+
+        input {
+            + label {
+                font-size: px(16);
+                color: #222;
+
+                &:after {
+                    width: px(20);
+                    height: px(20);
+                    top: 3px;
+                    left: -2px;
+                }
+
+                &:before {
+                    width: px(20);
+                    height: px(20);
+                    top: 4px;
+                    left: -1px;
+                }
+            }
+
+            &:checked {
+                + label {
+                    font-size: px(16);
+                    color: #222;
+
+                    &:before {
+                        background-color: #222;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // datepicker
@@ -959,6 +996,102 @@
         height: px(200);
         overflow-y: scroll;
         white-space: pre;
+    }
+}
+
+// acc
+.acc {
+    span {
+        font-size: px(15);
+    }
+
+    &-item {
+        @include pos(relative);
+
+        > .chk-wrap {
+            @include pos(absolute, $t:px(7), $l:px(10));
+            margin-right: px(5);
+            z-index: 1;
+
+            input {
+
+                &:checked + label:before {
+                  background-color: #222;
+                }
+
+                + label {
+                    width: px(19);
+                    height: px(19);
+                    padding: 0;
+
+                    &:after {
+                        border-color: #222;
+                    }
+
+                    &:before,
+                    &:after {
+                        top: px(2);
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .acc-item-tit {
+                &:before {
+                    transform: translateY(-50%) rotate(270deg);
+                }
+            }
+            .acc-sub {
+                max-height: px(130);
+            }
+        }
+
+        &-tit {
+            display: flex;
+            align-items: center;
+            @include pos(relative);
+            cursor: pointer;
+            padding: px(7) px(10);
+            background-color: #eee;
+
+            &:before {
+                content: '';
+                @include arr("semo", $c: #d3d3d3, $w: px(5), $h: px(5));
+                @include pos(absolute, $r:px(15), $t: 50%);
+                transform: translateY(-50%) rotate(90deg);
+                transition: all 300ms;
+            }
+
+            span {
+                margin-left: px(24);
+            }
+        }
+    }
+
+    //서브메뉴
+    &-sub {
+        //display: none;
+        display: flex;
+        max-height: 0;
+        flex-flow: wrap;
+        background-color: #f9f9f9;
+        overflow: hidden;
+        transition: all .3s;
+
+        &-item {
+            flex: 25%;
+            max-width: 25%;
+            padding: px(3) px(10);
+
+            .chk-wrap {
+                width: 100%;
+
+                label {
+                    @include elip("line1");
+                }
+            }
+        }
     }
 }
 

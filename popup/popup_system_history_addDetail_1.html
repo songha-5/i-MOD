@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+
+    !등록 팝업!
+    : id = "mw-addDetail-1"
+    등록 버튼 선택 시 뜨는 팝업
+-->
+<div class="ly-system ly-regi">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>시스템관리</li>
+                    <li>장애이력관리</li>
+                    <li>상세보기</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>요청정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>요청정보 리스트 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>요청번호</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="12" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>요청제목</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="승무사원앱 배차목록 미생성" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>장애유형</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="memberType" disabled>
+                                            <option value="선택">선택</option>
+                                            <option value="단말기장애-운전자" selected>단말기장애-운전자</option>
+                                            <option value="단말기장애-사용자">단말기장애-사용자</option>
+                                            <option value="단말기장애-GPS">단말기장애-GPS</option>
+                                            <option value="단말기장애-QR">단말기장애-QR</option>
+                                            <option value="일반문의">일반문의</option>
+                                            <option value="자료요청">자료요청</option>
+                                            <option value="기타">기타</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>지역</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select name="memberType" disabled>
+                                            <option value="선택">선택</option>
+                                            <option value="대구" selected>대구</option>
+                                            <option value="화천">화천</option>
+                                            <option value="강릉">강릉</option>
+                                            <option value="영종도">영종도</option>
+                                            <option value="DIFA">DIFA</option>
+                                            <option value="AMOD">AMOD</option>
+                                            <option value="세종 잡아타">세종 잡아타</option>
+                                            <option value="서울 중구 다산동">서울 중구 다산동</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청자</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="가나다" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>요청자 연락처</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="number" value="01011111111" disabled />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>요청일</th>
+                            <td>
+                                <div class="datepicker-wrap">
+                                    <input type="text" class="datepicker" disabled>
+                                </div>
+                            </td>
+                            <th>완료예정일</th>
+                            <td>
+                                <div class="datepicker-wrap">
+                                    <input type="text" class="datepicker">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>접수자</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="가나다" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th colspan="2"></th>
+                        </tr>
+                        <tr>
+                            <th>요청내용</th>
+                            <td colspan="3">
+                                <div class="qna-wrap">
+                                    <textarea disabled>안녕하세요, 금일(22일) 셔틀 1호 예약 고객 중 미탑승 하셨으나 목록에서 사라지지 않고 배차완료로 남아있던 건이 있었고(관제화면에서만 보여지고 승무사원 태블릿에서는 확인X), 해당 건으로 인해 승무사원 태블릿이 정상 작동하지 않는 이슈가 있었습니다. 이후 내역조회를 통해 미탑승 고객 확인 후 강제처리 하였으나, 강제처리 이후 탑승 예정이었던 08:00 노선 고객들이 전원 노쇼가 나는 상황이 발생하여 문의 드립니다.</textarea>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>첨부파일</th>
+                            <td class="scroll-wrap" colspan="3">
+                                <div class="btn-wrap">
+                                    <button class="btn btn-download">대기</button>
+                                    <button class="btn btn-download">고객</button>
+                                    <button class="btn btn-download">노쇼</button>
+                                    <button class="btn btn-download">태블릿</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>파일첨부</th>
+                            <td colspan="3">
+                                <div class="btn-wrap">
+                                    <button class="btn btn-upload">파일 선택</button>
+                                    <span>선택된 파일 없음</span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>요청처리결과</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>요청정보 리스트 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>최종결과</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="완료" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                            <!--
+                                !주석!
+
+                                해당내용이 없다면 공란으로 비워주세요
+                            -->
+                            <th>처리완료일</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" value="YYYY/MM/DD" disabled/>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

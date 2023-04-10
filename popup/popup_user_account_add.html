@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+
+<!-- 팝업리스트 -->
+<!--
+    모든 팝업은 id="wrapper"밖에 있음
+
+
+    !등록 팝업!
+    : id = "mw-add"
+    상세보기 버튼 선택 시 뜨는 팝업
+-->
+<div class="ly-system ly-regi">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>사용자관리</li>
+                    <li>관리자계정관리</li>
+                    <li>등록</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>관리자계정 정보</span>
+                    </div>
+                    <table class="pop-table">
+                        <caption>관리자 계정 정보 테이블</caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col style="width: 25%"/>
+                            <col style="width: 25%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>관리자명</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text"/>
+                                    </label>
+                                </div>
+                            </td>
+                            <th>관리 지역</th>
+                            <td>
+                                <div class="dropdown-wrap">
+                                    <button class="dropdown-btn" type="button">
+                                        <div class="dropdown-btn-inner">항목을 선택해주세요</div>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-filter">
+                                            <button class="dropdown-all-check" type="button">전체선택</button>
+                                            <button class="dropdown-all-none" type="button">전체해제</button>
+                                        </div>
+                                        <ul class="dropdown-menu-list">
+                                            <li class="dropdown-item"><span>대구</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>화천</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>강릉</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>영종도</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>DIFA</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>AMOD</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>세종 잡아타</span><i class="icon">체크아이콘</i></li>
+                                            <li class="dropdown-item"><span>서울 중구 다산동</span><i class="icon">체크아이콘</i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>관리자 ID</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="text" >
+                                    </label>
+                                </div>
+                            </td>
+                            <th>비밀번호</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <label>
+                                        <input class="ip" type="password" value="" />
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-header">
+                    <div class="table-tit">
+                        <span>관리자 권한</span>
+                    </div>
+
+                    <div class="acc-wrap">
+                        <div class="all-chk">
+                            <div class="chk-wrap chk-all">
+                                <input type="checkbox" id="chk-all" checked>
+                                <label for="chk-all">전체 선택</label>
+                            </div>
+                        </div>
+                        <ul class="acc">
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-1" checked>
+                                    <label for="chk-1"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>메인</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-1-1" checked>
+                                            <label for="chk-1-1">대시보드</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-2" checked>
+                                    <label for="chk-2"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>사용자관리</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-2-1" checked>
+                                            <label for="chk-2-1">회원관리</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-2-2" checked>
+                                            <label for="chk-2-2">승무사원관리</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-2-3" checked>
+                                            <label for="chk-2-3">지역관리</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-2-4" checked>
+                                            <label for="chk-2-4">결제관리</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-2-5" checked>
+                                            <label for="chk-2-5">관리자계정관리</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-3" checked>
+                                    <label for="chk-3"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>실시간모니터링</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-3-1" checked>
+                                            <label for="chk-3-1">관제</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-3-2" checked>
+                                            <label for="chk-3-2">배차요청이력</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-3-3" checked>
+                                            <label for="chk-3-3">차량운행현황</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-4" checked>
+                                    <label for="chk-4"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>정류장관리</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-4-1" checked>
+                                            <label for="chk-4-1">정류장관리</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-4-2" checked>
+                                            <label for="chk-4-2">정류장보기</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-5" checked>
+                                    <label for="chk-5"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>차량관리</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-5-1" checked>
+                                            <label for="chk-5-1">차량관리</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-5-2" checked>
+                                            <label for="chk-5-2">단말기관리</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-6" checked>
+                                    <label for="chk-6"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>설정관리</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-6-1" checked>
+                                            <label for="chk-6-1">메시지 발송 이력</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-7" checked>
+                                    <label for="chk-7"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>통계</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-7-1" checked>
+                                            <label for="chk-7-1">탑승객 현황</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-7-2" checked>
+                                            <label for="chk-7-2">운행 현황</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-8" checked>
+                                    <label for="chk-8"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>게시판관리</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-8-1" checked>
+                                            <label for="chk-8-1">공지사항</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-8-2" checked>
+                                            <label for="chk-8-2">Q&A</label>
+                                        </div>
+                                    </li>
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-8-3" checked>
+                                            <label for="chk-8-3">자주묻는질문(FAQ)</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="acc-item">
+                                <div class="chk-wrap">
+                                    <input type="checkbox" id="chk-9" checked>
+                                    <label for="chk-9"></label>
+                                </div>
+                                <div class="acc-item-tit">
+                                    <span>시스템관리</span>
+                                </div>
+
+                                <ul class="acc-sub">
+                                    <li class="acc-sub-item">
+                                        <div class="chk-wrap">
+                                            <input type="checkbox" id="chk-9-1" checked>
+                                            <label for="chk-9-1">장애이력관리</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

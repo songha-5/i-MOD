@@ -179,7 +179,9 @@
                                     <th>상태</th>
                                     <td>
                                         <div class="dropdown-wrap">
-                                            <button class="dropdown-btn" type="button">항목을 선택해주세요</button>
+                                            <button class="dropdown-btn" type="button">
+                                                <div class="dropdown-btn-inner">항목을 선택해주세요</div>
+                                            </button>
                                             <div class="dropdown-menu">
                                                 <div class="dropdown-menu-filter">
                                                     <button class="dropdown-all-check" type="button">전체선택</button>
@@ -200,7 +202,9 @@
                                     <!--<th>검색 필터</th>
                                     <td>
                                         <div class="dropdown-wrap">
-                                            <button class="dropdown-btn" type="button">항목을 선택해주세요</button>
+                                            <button class="dropdown-btn" type="button">
+                                                <div class="dropdown-btn-inner">항목을 선택해주세요</div>
+                                            </button>
                                             <div class="dropdown-menu">
                                                 <div class="dropdown-menu-filter">
                                                     <button class="dropdown-all-check" type="button">전체선택</button>
@@ -318,14 +322,12 @@
                                 <col style="width: 160px"/>
                                 <col style="width: 160px"/>
                                 <col style="width: 100px"/>
-                                <col style="width: 170px"/>
-                                <col style="width: 170px"/>
+                                <col style="width: 60px"/>
+                                <col style="width: 60px"/>
+                                <col style="width: 60px"/>
+                                <col style="width: 60px"/>
                                 <col style="width: 90px"/>
                                 <col style="width: 90px"/>
-                                <col style="width: 90px"/>
-                                <col style="width: 90px"/>
-                                <col style="width: 100px"/>
-                                <col style="width: 100px"/>
                                 <col style="width: 170px"/>
                                 <col style="width: 200px"/>
                                 <col style="width: 400px"/>
@@ -344,7 +346,7 @@
                                     <th class="arrow-no" colspan="3">승차지</th>
                                     <th class="arrow-no" colspan="5">하차지</th>
                                     <th class="arrow-no" colspan="2">탑승권</th>
-                                    <th class="arrow-no" colspan="3">QR태깅</th>
+                                    <th class="arrow-no">QR태깅</th>
                                     <th class="arrow-no" colspan="4">탑승인원(명)</th>
                                     <th rowspan="2">요금(원)</th>
                                     <th rowspan="2">거리(km)</th>
@@ -366,8 +368,6 @@
                                     <th>아이디</th>
                                     <th>전달여부</th>
                                     <th>태깅차량</th>
-                                    <th>수신일자</th>
-                                    <th>승차지도착시간차</th>
                                     <th>총계</th>
                                     <th>어른</th>
                                     <th>청소년</th>
@@ -400,8 +400,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -413,7 +411,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -441,8 +439,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -454,7 +450,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -482,8 +478,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -495,7 +489,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -523,8 +517,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -536,7 +528,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -564,8 +556,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -577,7 +567,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -605,8 +595,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -618,7 +606,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -646,8 +634,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -659,7 +645,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -687,8 +673,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -700,7 +684,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -728,8 +712,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -741,7 +723,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -769,8 +751,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -782,7 +762,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -810,8 +790,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -823,7 +801,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -851,8 +829,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -864,7 +840,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -892,8 +868,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td>전달 (<span>010-XXXX-XXXX</span>)</td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -905,7 +879,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -933,8 +907,6 @@
                                     <td>010-XXXX-XXXX</td>
                                     <td></td>
                                     <td>대구1호차</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
-                                    <td>YYYY-MM-DD HH:MM:SS</td>
                                     <td>1</td>
                                     <td>1</td>
                                     <td>0</td>
@@ -946,7 +918,7 @@
                                     <td class="table-left"></td>
                                     <td>
                                         <div class="btn-wrap">
-                                            <button class="btn btn-table" type="button" onclick="popupOpen('minimap','mw')">궤적보기</button>
+                                            <button class="btn btn-table" type="button" onclick="popupCenter({url:'./popup/popup_monitor_ridehistory.html', title: 'popup_monitor_ridehistory', w: 700, h: 730})">궤적보기</button>
                                         </div>
                                     </td>
                                     <td>
@@ -1002,6 +974,7 @@
     </div>
 </div>
 
+<!--
 <div id="mw-minimap" class="ly-pop middle">
     <div class="wrap map">
         <div class="content">
@@ -1016,15 +989,16 @@
                 </div>
             </header>
             <div class="map-wrap">
-                <!--
+                &lt;!&ndash;
                     !주석!
 
                     맵 그리는 위치
-                -->
+                &ndash;&gt;
             </div>
         </div>
     </div>
 </div>
+-->
 
 <script src="./resources/js/jquery-3.6.1.min.js"></script>
 <script src="./resources/js/jquery-ui.min.js"></script>

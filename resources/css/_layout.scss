@@ -92,22 +92,24 @@
         height: 100%;
 
         &.active {
-
             .menu {
                 width: px(49);
 
                 .menu-box-list {
+
                     a {
                         span {
-                            display: none;
+                            opacity: 0;
+                            transition: opacity 200ms ease-in-out;
+
                         }
                         &:after {
-                            display: none;
+                            opacity: 0;
+                            transition: opacity 200ms ease-in-out;
                         }
                     }
 
                     .menu-sub {
-                        display: none;
                         opacity: 0;
                         @include pos(absolute, $l:px(49));
                         width: px(220);
@@ -119,6 +121,12 @@
 
                         a {
                             padding: px(10) px(25);
+                        }
+                    }
+
+                    &.active {
+                        .menu-sub {
+                            transition: opacity 0ms ease-in-out;
                         }
                     }
                 }
@@ -141,6 +149,7 @@
         height: 100%;
         background-color: $darkPurple;
         z-index: 33;
+        transition: width 300ms ease-in-out;
 
 
         &-switch {
@@ -184,6 +193,9 @@
                         @include arr(semo, $w:px(4), $h:px(3), $c:#fff);
                         transform: rotate(90deg) translateY(-45%);
                         margin: 0;
+
+                        opacity: 1;
+                        transition: opacity 200ms ease-in-out 100ms;
                     }
 
                     > i {
@@ -199,6 +211,9 @@
 
                     > span {
                         color: inherit;
+                        opacity: 1;
+                        overflow: hidden;
+                        transition: opacity 200ms ease-in-out 300ms;
                     }
                 }
 
@@ -287,6 +302,9 @@
 
                     .menu-sub {
                         display: block;
+                        opacity: 1;
+                        overflow: hidden;
+                        transition: opacity 200ms ease-in-out 300ms;
                     }
                 }
             }
