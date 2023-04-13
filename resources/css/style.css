@@ -3177,6 +3177,7 @@ body.popup {
   padding: 0;
   margin-left: 21.7rem;
   background-color: #fff;
+  transition: margin-left 300ms ease-in-out;
 }
 .admin .logo-area .user {
   border-bottom: 0.1rem solid rgb(189, 189, 189);
@@ -3229,6 +3230,7 @@ body.popup {
 .admin .main {
   height: calc(100% - 3.8rem);
   margin-left: 21.7rem;
+  transition: margin-left 300ms ease-in-out;
 }
 .admin .main > form {
   height: 100%;

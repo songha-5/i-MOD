@@ -334,6 +334,7 @@
         padding: 0;
         margin-left: px(217);
         background-color: #fff;
+        transition: margin-left 300ms ease-in-out;
 
         .user {
             border-bottom: px(1) solid rgb(189, 189, 189);
@@ -400,6 +401,7 @@
     .main {
         height: calc(100% - px(38));
         margin-left: px(217);
+        transition: margin-left 300ms ease-in-out;
 
         > form {
             height: 100%;
