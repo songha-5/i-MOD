@@ -3162,6 +3162,7 @@ body.popup {
 .admin .menu-sub {
   display: none;
   background-color: #3b305e;
+  white-space: nowrap;
 }
 .admin .menu-sub a {
   display: block;
