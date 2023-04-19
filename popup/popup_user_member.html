@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+
+
+<div class="ly-system">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>사용자관리</li>
+                    <li>회원관리</li>
+                    <li>상세보기</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <table class="pop-table">
+                        <caption>회원 정보 테이블</caption>
+                        <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%"/>
+                            <col style="width: 35%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>사용자 ID</th>
+                            <td>
+                                <p>010-XXXX-XXXX</p>
+                            </td>
+                            <th>회원유형</th>
+                            <td>
+                                <p>어른</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <section class="tab-wrap">
+                    <ul class="tab-menu">
+                        <li class="tab-menu-item active">회원정보</li>
+                        <li class="tab-menu-item">탑승이력</li>
+                    </ul>
+
+                    <section class="tab-area active">
+                        <div class="table-header">
+                            <div class="table-tit">
+                                <span>회원정보</span>
+                                <div class="btn-wrap">
+                                    <button class="btn btn-table" type="button">저장</button>
+                                </div>
+                            </div>
+                            <table class="pop-table">
+                                <caption>회원정보 수정 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 15%" />
+                                    <col style="width: 35%" />
+                                    <col style="width: 15%"/>
+                                    <col style="width: 35%"/>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>회원유형 *</th>
+                                    <td>
+                                        <div class="select-wrap">
+                                            <label>
+                                                <select name="memberType">
+                                                    <option value="어른" selected>어른</option>
+                                                    <option value="청소년">청소년</option>
+                                                    <option value="어린이">어린이</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th>생년월일</th>
+                                    <td>
+                                        <div class="datepicker-wrap">
+                                            <input type="text" class="datepicker">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>아이디 사용여부 *</th>
+                                    <td>
+                                        <div class="select-wrap">
+                                            <label>
+                                                <select name="memberType">
+                                                    <option value="사용" selected>사용</option>
+                                                    <option value="미사용">미사용</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td rowspan="2"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="table-header">
+                            <div class="table-tit">
+                                <span>회원부가정보</span>
+                            </div>
+                            <table class="pop-table">
+                                <caption>회원 부가 정보 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 15%" />
+                                    <col style="width: 35%" />
+                                    <col style="width: 15%"/>
+                                    <col style="width: 35%"/>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>SMS전송 동의여부</th>
+                                    <td>
+                                        <p>예</p>
+                                    </td>
+                                    <th>PUSH전송 동의여부</th>
+                                    <td>
+                                        <p>예</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="tab-area">
+                        <div class="table-tit">
+                            <span>탑승이력</span>
+                            <div class="btn-wrap">
+                                <div class="datepicker-wrap">
+                                    <div class="datepicker-pair">
+                                        <label>
+                                            <input type="text" class="datepicker">
+                                        </label>
+                                    </div>
+                                    <div class="datepicker-pair">
+                                        <label>
+                                            <input type="text" class="datepicker">
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-table" type="button">검색</button>
+                            </div>
+                        </div>
+                        <div class="content-wrap">
+                            <div class="table table-inquiry">
+                                <table>
+                                    <caption>탑승이력 테이블</caption>
+                                    <colgroup>
+                                        <col style="width: 700px"/>
+                                        <col style="width: 120px"/>
+                                        <col style="width: 180px"/>
+                                        <col style="width: 700px"/>
+                                        <col style="width: 120px"/>
+                                        <col style="width: 180px"/>
+                                        <col style="width: 70px"/>
+                                        <col style="width: 70px"/>
+                                        <col style="width: 70px"/>
+                                        <col style="width: 70px"/>
+                                        <col style="width: 120px"/>
+                                        <col style="width: 120px"/>
+                                        <col style="width: 120px"/>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th colspan="3" class="arrow-no">승차지</th>
+                                        <th colspan="3" class="arrow-no">하차지</th>
+                                        <th colspan="4" class="arrow-no">탑승인원(명)</th>
+                                        <th rowspan="2">요금(원)</th>
+                                        <th rowspan="2">이동시간(분)</th>
+                                        <th rowspan="2">탑승권ID</th>
+                                    </tr>
+                                    <tr>
+                                        <th>정류장명</th>
+                                        <th>정류장ID</th>
+                                        <th>승차시간</th>
+                                        <th>정류장명</th>
+                                        <th>정류장ID</th>
+                                        <th>하차시간</th>
+                                        <th>총계</th>
+                                        <th>어른</th>
+                                        <th>청소년</th>
+                                        <th>어린이</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="table-left">인천영어마을.파라고센트럴(이음대로.디에트르더펠리체 방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td class="table-left">삼정프라자(참빛감리교회방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1,250</td>
+                                        <td>1.69</td>
+                                        <td>123112341241</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left">인천영어마을.파라고센트럴(이음대로.디에트르더펠리체 방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td class="table-left">삼정프라자(참빛감리교회방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1,250</td>
+                                        <td>1.69</td>
+                                        <td>123112341241</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left">인천영어마을.파라고센트럴(이음대로.디에트르더펠리체 방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td class="table-left">삼정프라자(참빛감리교회방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1,250</td>
+                                        <td>1.69</td>
+                                        <td>123112341241</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-left">인천영어마을.파라고센트럴(이음대로.디에트르더펠리체 방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td class="table-left">삼정프라자(참빛감리교회방면)</td>
+                                        <td>12345</td>
+                                        <td>YYYY-MM-DD HH:MM:SS</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1,250</td>
+                                        <td>1.69</td>
+                                        <td>123112341241</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- 데이터 없을 시-->
+                            <!--<div class="table table-inquiry">
+                                <table>
+                                </table>
+                            </div>-->
+                        </div>
+                    </section>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>

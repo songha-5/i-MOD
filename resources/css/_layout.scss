@@ -1575,3 +1575,18 @@
 .scroll-wrap {
     overflow-y: auto;
 }
+
+
+.slide-label {
+    display: flex;
+    align-items: center;
+
+    > span {
+        flex: px(65);
+        text-align: left;
+    }
+
+    > .select-wrap {
+        width: calc(100% - 65px);
+    }
+}

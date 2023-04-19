@@ -4357,6 +4357,18 @@ body.popup {
   overflow-y: auto;
 }
 
+.slide-label {
+  display: flex;
+  align-items: center;
+}
+.slide-label > span {
+  flex: 6.5rem;
+  text-align: left;
+}
+.slide-label > .select-wrap {
+  width: calc(100% - 65px);
+}
+
 .hide {
   display: none;
 }
