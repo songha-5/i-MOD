@@ -2079,9 +2079,6 @@ body.popup {
 .ly-system .content main .table-inquiry table {
   width: 100%;
 }
-.ly-system .content main .table .nodata {
-  margin-top: 6rem;
-}
 .ly-system .content main .pop-table tbody tr.chk-total .active, .ly-system .content main .pop-table tbody tr.chk-QR .active, .ly-system .content main .pop-table tbody tr.chk-tagless .active {
   color: #cc0000;
 }
