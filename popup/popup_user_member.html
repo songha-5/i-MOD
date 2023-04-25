@@ -39,9 +39,9 @@
                             <td>
                                 <p>010-XXXX-XXXX</p>
                             </td>
-                            <th>회원유형</th>
+                            <th>닉네임</th>
                             <td>
-                                <p>어른</p>
+                                <p>닉네임네임</p>
                             </td>
                         </tr>
                         </tbody>
@@ -58,9 +58,9 @@
                         <div class="table-header">
                             <div class="table-tit">
                                 <span>회원정보</span>
-                                <div class="btn-wrap">
+                                <!--<div class="btn-wrap">
                                     <button class="btn btn-table" type="button">저장</button>
-                                </div>
+                                </div>-->
                             </div>
                             <table class="pop-table">
                                 <caption>회원정보 수정 테이블</caption>
@@ -72,14 +72,13 @@
                                 </colgroup>
                                 <tbody>
                                 <tr>
-                                    <th>회원유형 *</th>
+                                    <th>아이디 사용여부 *</th>
                                     <td>
                                         <div class="select-wrap">
                                             <label>
-                                                <select name="memberType">
-                                                    <option value="어른" selected>어른</option>
-                                                    <option value="청소년">청소년</option>
-                                                    <option value="어린이">어린이</option>
+                                                <select name="memberType" disabled>
+                                                    <option value="사용" selected>사용</option>
+                                                    <option value="미사용">미사용</option>
                                                 </select>
                                             </label>
                                         </div>
@@ -87,23 +86,23 @@
                                     <th>생년월일</th>
                                     <td>
                                         <div class="datepicker-wrap">
-                                            <input type="text" class="datepicker">
+                                            <input type="text" class="datepicker" disabled>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>아이디 사용여부 *</th>
+                                    <th>이메일</th>
                                     <td>
-                                        <div class="select-wrap">
-                                            <label>
-                                                <select name="memberType">
-                                                    <option value="사용" selected>사용</option>
-                                                    <option value="미사용">미사용</option>
-                                                </select>
-                                            </label>
-                                        </div>
+                                        <p>asd@asdasd.com</p>
                                     </td>
-                                    <td rowspan="2"></td>
+                                    <th>앱 지역</th>
+                                    <td><p>대구</p></td>
+                                </tr>
+                                <tr>
+                                    <th>마지막 로그인 시간</th>
+                                    <td><p>YYYY-MM-DD HH:MM:SS</p></td>
+                                    <th>SNS로그인</th>
+                                    <td><p></p></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -157,7 +156,7 @@
                             </div>
                         </div>
                         <div class="content-wrap">
-                           <!-- <div class="table table-inquiry">
+                            <div class="table table-inquiry">
                                 <table>
                                     <caption>탑승이력 테이블</caption>
                                     <colgroup>
@@ -173,7 +172,7 @@
                                         <col style="width: 70px"/>
                                         <col style="width: 120px"/>
                                         <col style="width: 120px"/>
-                                        <col style="width: 120px"/>
+                                        <col style="width: 280px"/>
                                     </colgroup>
                                     <thead>
                                     <tr>
@@ -211,7 +210,7 @@
                                         <td>0</td>
                                         <td>1,250</td>
                                         <td>1.69</td>
-                                        <td>123112341241</td>
+                                        <td>d2b40e8d-3009-4590-ad0a-1affc248e54b</td>
                                     </tr>
                                     <tr>
                                         <td class="table-left">인천영어마을.파라고센트럴(이음대로.디에트르더펠리체 방면)</td>
@@ -260,11 +259,11 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                            </div>-->
-                            <!-- 데이터 없을 시-->
-                            <div class="table table-inquiry">
-                               <span class="nodata">데이터가 없습니다.</span>
                             </div>
+                            <!-- 데이터 없을 시-->
+                           <!-- <div class="table table-inquiry">
+                               <span class="nodata">데이터가 없습니다.</span>
+                            </div>-->
                         </div>
                     </section>
                 </section>

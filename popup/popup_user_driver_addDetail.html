@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../resources/css/style.css" media="screen" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/img/favicon_trans.png">
+    <title>Mobble</title>
+</head>
+
+<body class="popup">
+
+
+
+<div class="ly-system">
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+                <ul class="user-map">
+                    <li>사용자관리</li>
+                    <li>승무사원관리</li>
+                    <li>상세보기</li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="table-header">
+                    <table class="pop-table">
+                        <caption>회원 정보 테이블</caption>
+                        <colgroup>
+                            <col style="width: 15%" />
+                            <col style="width: 35%" />
+                            <col style="width: 15%"/>
+                            <col style="width: 35%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <input class="ip disabled" type="text" id="userName" value="홍길동" disabled>
+                                </div>
+                            </td>
+                            <th>휴대전화번호</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <input class="ip disabled" type="text" id="userID" value="010-XXXX-XXXX" disabled>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>소속운영사</th>
+                            <td>
+                                <div class="ip-wrap">
+                                    <input class="ip disabled" type="text" id="userCompany" value="CL" disabled>
+                                </div>
+                            </td>
+                            <th>사용 여부</th>
+                            <td>
+                                <div class="select-wrap">
+                                    <label>
+                                        <select class="disabled" name="memberType" disabled>
+                                            <option value="사용" selected>사용</option>
+                                            <option value="미사용">미사용</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-tit table-space">
+                    <span>운행이력</span>
+                    <div class="btn-wrap">
+                        <div class="datepicker-wrap">
+                            <div class="datepicker-pair">
+                                <label>
+                                    <input type="text" class="datepicker">
+                                </label>
+                            </div>
+                            <div class="datepicker-pair">
+                                <label>
+                                    <input type="text" class="datepicker">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="dropdown-wrap">
+                            <button class="dropdown-btn" type="button">
+                                <div class="dropdown-btn-inner">항목을 선택해주세요</div>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu-filter">
+                                    <button class="dropdown-all-check" type="button">전체선택</button>
+                                    <button class="dropdown-all-none" type="button">전체해제</button>
+                                </div>
+                                <ul class="dropdown-menu-list">
+                                    <li class="dropdown-item"><span>운행시작</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>운행종료예약</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>도착처리</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>GPS수집</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>운행종료</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>휴식중</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>휴식예약</span><i class="icon">체크아이콘</i></li>
+                                    <li class="dropdown-item"><span>운행재개</span><i class="icon">체크아이콘</i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-table" type="button">검색</button>
+                    </div>
+                </div>
+                <div class="content-wrap">
+                    <div class="table table-inquiry">
+                        <table>
+                            <caption>운행이력 테이블</caption>
+                            <colgroup>
+                                <col style="width: 120px"/>
+                                <col style="width: 160px"/>
+                                <col style="width: 100px"/>
+                                <col style="width: 320px"/>
+                                <col style="width: 90px"/>
+                                <col style="width: 90px"/>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>차량명</th>
+                                <th>이벤트시간</th>
+                                <th>이벤트명</th>
+                                <th>사유/지역명/정류장명</th>
+                                <th>운행거리(km)</th>
+                                <th>운행시간(분)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>대구 1호차</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>운행종료</td>
+                                <td class="table-left">퇴근</td>
+                                <!--
+                                    !주석!
+
+                                    운행종료시에만 운행거리/운행시간이 표기됨
+                                -->
+                                <td>115.15</td>
+                                <td>255</td>
+                            </tr>
+                            <tr>
+                                <td>대구 1호차</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>도착처리</td>
+                                <td class="table-left">인천영어마을.파라고센트럴(이음대로.디에트르더펠리체 방면)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>대구 1호차</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>도착처리</td>
+                                <td class="table-left">동문아파트(보람프라자앞방면)</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>대구 1호차</td>
+                                <td>YYYY-MM-DD HH:MM:SS</td>
+                                <td>운행종료예약</td>
+                                <td class="table-left">식사</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 데이터 없을 시-->
+                    <!--<div class="table table-inquiry">
+                        <table>
+                        </table>
+                    </div>-->
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+
+<script src="../resources/js/jquery-3.6.1.min.js"></script>
+<script src="../resources/js/jquery-ui.min.js"></script>
+<script src="../resources/js/UI.js"></script>
+<script>
+    $(function () {
+    });
+</script>
+
+</body>
+</html>
