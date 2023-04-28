@@ -150,8 +150,8 @@ const popupCenter = ({url, title, w, h}) => {
 	var newWindow = window.open(url, title,
 		`
       scrollbars=no,
-      width=${w / systemZoom}, 
-      height=${h / systemZoom}, 
+      width=${w}, 
+      height=${h}, 
       top=${top}, 
       left=${left}
       `
@@ -163,11 +163,9 @@ const popupCenter = ({url, title, w, h}) => {
 // 메뉴
 UI.acc = {
 	init: function(){
-
 		var wrap = $("#wrapper");
 		var menuBtn = wrap.find($(".menu-switch"));
 		var menu = wrap.find($(".menu-box-list"));
-
 
 		menu.off("click").on("click", function(e){
 			$(".menu-box-list").removeClass("active");
@@ -191,8 +189,6 @@ UI.acc = {
 				});
 
 
-			} else {
-				console.log("no active!");
 			}
 		});
 

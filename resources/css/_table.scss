@@ -118,6 +118,7 @@
                     border-bottom: px(1) solid #bdbdbd;
                     font-size: px(14);
                     color: #bdbdbd;
+                    display: none;
 
                     th {
                         width: px(100);
@@ -198,15 +199,32 @@
                             }
                         }
                     }
+
+                    &:nth-of-type(1) {
+                        display: table-row;
+                    }
                 }
             }
         }
         &-wide {
             width: 35%;
         }
+
+        /*.table-more {
+            &.hide {
+                display: none;
+            }
+            display: block;
+        }*/
     }
 
     // content-main table tit
+
+    &-show {
+        tr {
+            display: table-row !important;
+        }
+    }
     &-tit {
         display: flex;
         justify-content: space-between;
