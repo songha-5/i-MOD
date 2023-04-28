@@ -618,6 +618,22 @@
             }
         }
     }
+
+    &.map-icon-arr {
+        z-index: 1;
+        background-image: url($urlImg + 'icon_arrival.png');
+        width: px(52);
+        height: px(24);
+        transform: translate(-50%, 50%);
+    }
+    &.map-icon-dep {
+        z-index: 1;
+        background-image: url($urlImg + 'icon_departure.png');
+        width: px(52);
+        height: px(24);
+        transform: translate(-50%, 50%);
+    }
+
 }
 
 

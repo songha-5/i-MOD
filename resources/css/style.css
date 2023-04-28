@@ -771,6 +771,20 @@ fieldset legend {
 [class*=map-icon-].map-icon-speed.active:after {
   border: 0.3rem solid #000;
 }
+[class*=map-icon-].map-icon-arr {
+  z-index: 1;
+  background-image: url("../img/icon_arrival.png");
+  width: 5.2rem;
+  height: 2.4rem;
+  transform: translate(-50%, 50%);
+}
+[class*=map-icon-].map-icon-dep {
+  z-index: 1;
+  background-image: url("../img/icon_departure.png");
+  width: 5.2rem;
+  height: 2.4rem;
+  transform: translate(-50%, 50%);
+}
 
 a.btn {
   font-size: 1.4rem;
